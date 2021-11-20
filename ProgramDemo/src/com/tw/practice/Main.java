@@ -8,7 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int noOfLabs = 3;
-        int labCapacity[] = new int[noOfLabs];
+        int[] labCapacity = new int[noOfLabs];
 
         for(int i=0; i<noOfLabs; i++){
             int tmp = sc.nextInt();

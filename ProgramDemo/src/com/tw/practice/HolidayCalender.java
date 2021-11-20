@@ -1,9 +1,9 @@
 package com.tw.practice;
 
 class Holiday {
-    private String holidayName;
-    private int day;
-    private int month;
+    private final String holidayName;
+    private final int day;
+    private final int month;
 
     public Holiday(String holidayName, int day, int month) {
         this.holidayName = holidayName;
@@ -17,6 +17,10 @@ class Holiday {
 
     public int getDay() {
         return day;
+    }
+
+    public String getHolidayName(){
+        return holidayName;
     }
 
     public boolean inSameMonth(Holiday holiday) {
@@ -33,6 +37,7 @@ class Holiday {
 }
 
 public class HolidayCalender {
+
     public static void main(String[] args) {
 
         Holiday holiday1 = new Holiday("Independence day", 15, 8);
@@ -47,3 +52,4 @@ public class HolidayCalender {
 
     }
 }
+
