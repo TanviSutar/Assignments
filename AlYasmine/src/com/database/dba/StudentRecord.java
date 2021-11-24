@@ -5,43 +5,58 @@ import java.util.List;
 
 public class StudentRecord {
 
-    private List<Student> studentList;
+    private List<Student> students;
 
-    StudentRecord(){
-        studentList = new ArrayList<>();
+    StudentRecord() {
+        students = new ArrayList<>();
     }
 
-    void addNewStudent(String name, int rollNo){
+    void addNewStudent(String name, int rollNo) {
         Student newStudent = new Student(name, rollNo);
-        studentList.add(newStudent);
+        students.add(newStudent);
     }
 
-    void deleteStudentByRollNo(int rollNo){
-        for(Student student: studentList){
-            if(student.getRollNo() == rollNo){
-                studentList.remove(student);
+    boolean deleteByRollNo(int rollNo) {
+        for (Student student : students) {
+            if (student.getRollNo() == rollNo) {
+                students.remove(student);
+                return true;
             }
         }
+        return false;
     }
 
-    public Student getStudentByRollNo(int rollNo){
-        for(Student student: studentList){
-            if(student.getRollNo() == rollNo){
+    boolean deleteByName(String name){
+        for(Student student : students){
+            if(student.getName().equals("name")){
+                students.remove(student);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Student getByRollNo(int rollNo) {
+        for (Student student : students) {
+            if (student.getRollNo() == rollNo) {
                 return student;
             }
         }
         return null;
     }
 
-    public void printAllStudent(){
-        for(Student student: studentList){
-            System.out.println(student);
+    public Student getByName(String name){
+        for(Student student : students){
+            if(student.getName().equals("name")){
+                return student;
+            }
         }
+        return null;
     }
 
-    boolean upadteStudentByRollNo(int rollNo, String name){
-        for(Student student: studentList){
-            if(student.getRollNo() == rollNo){
+    boolean upadteByRollNo(int rollNo, String name) {
+        for (Student student : students) {
+            if (student.getRollNo() == rollNo) {
                 student.setName(name);
                 return true;
             }
@@ -49,4 +64,9 @@ public class StudentRecord {
         return false;
     }
 
+    public void printAllStudents() {
+        for (Student student : students) {
+            System.out.println(student);
+        }
+    }
 }
