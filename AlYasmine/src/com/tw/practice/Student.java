@@ -1,4 +1,4 @@
-package com.database.dba;
+package com.tw.practice;
 
 public class Student {
     private String name;
