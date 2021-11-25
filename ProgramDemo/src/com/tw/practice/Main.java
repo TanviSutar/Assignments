@@ -10,11 +10,7 @@ public class Main {
         l.add("tanvi");
         l.add(90);
         l.add("sutar");
-//
-//        String arr[] = new String[3];
-//        arr[0] = "tanvi";
-//        arr[1] = "Sutar";
-//        arr[2] = 5;
+
 
         String s = (String) l.get(0);
         String s1 = (String) l.get(1);
